@@ -1,0 +1,194 @@
+// colors
+@each $s, $i in $colors {
+  .background__#{$s} {
+    background-color: #{$i} !important;
+    &:not([disabled]) {
+      &.hoverable:hover {
+        filter: brightness(110%);
+        transition: all 0.1s ease-in-out;
+      }
+      &.focusable:focus {
+        filter: brightness(110%);
+      }
+    }
+  }
+  .color__#{$s} {
+    color: #{$i} !important;
+    &.hoverable:hover {
+      color: lighten($i, 20%) !important;
+      cursor: pointer;
+    }
+  }
+  .border__#{$s} {
+    border-color: #{$i} !important;
+  }
+  @each $d in $directions {
+    .bg_gradient__#{$d}--#{$s} {
+      background-image: linear-gradient(
+        to $d,
+        darken($i, 20%),
+        lighten($i, 20%)
+      );
+    }
+  }
+}
+
+// positions
+@each $d in $directions {
+  @for $i from 0 through 100 {
+    .m__#{$d}--#{$i} {
+      margin-#{$d}: 1px * $i !important;
+    }
+    .p__#{$d}--#{$i} {
+      padding-#{$d}: 1px * $i !important;
+    }
+    .m--#{$i} {
+      margin: 1px * $i !important;
+    }
+    .p--#{$i} {
+      padding: 1px * $i !important;
+    }
+    .w--#{$i} {
+      width: 1% * $i !important;
+    }
+    .h--#{$i} {
+      height: 1% * $i !important;
+    }
+    .w__vw--#{$i} {
+      width: 1vw * $i !important;
+    }
+    .h__vh--#{$i} {
+      height: 1vh * $i !important;
+    }
+  }
+}
+
+@for $i from 0 through 100 {
+  .fs-#{$i} {
+    font-size: 1px * $i !important;
+  }
+}
+
+@for $i from 0 through 100 {
+  .w-#{$i} {
+    width: 1% * $i !important;
+  }
+}
+
+@for $i from 0 through 1000 {
+  .w-#{$i}-px {
+    width: 1px * $i !important;
+  }
+}
+
+.app-wrapper-container {
+  height: 100%;
+}
+
+.app-container { 
+  margin: 0 121px 36px !important;
+  .content {
+    text-align: center;
+    &.register-content, &.login-content {
+      box-shadow: 0px 4px 8px rgba(173, 182, 177, 0.1);
+      background: $white; 
+      margin-top: 64px;
+      padding: 64px 36.5px;
+    }
+    &.home-content {
+    }
+  } 
+}
+
+.input--checked {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 200%;
+  letter-spacing: 0.005em;
+  color: #333333;
+}
+
+/* Hide the browser's default checkbox */
+.input--checked input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: 1px solid #EAEDEB;
+  border-radius: 2px;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+.input--checked input:checked ~ .checkmark {
+  background-color: #fff;
+  border: 1px solid #EAEDEB;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.input--checked input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.input--checked .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid #339967;
+  border-width: 0 2.5px 2.5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.error-text {
+  color: red;
+}
+// loading icon 
+.donut {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 0.3rem solid rgba(#339967, 0.3);
+  border-top-color: #339967;
+  animation: 1.5s spin infinite linear;
+
+  &.multi {
+    border-bottom-color: #339967;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

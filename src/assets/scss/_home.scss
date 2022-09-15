@@ -1,0 +1,132 @@
+@import "variables";
+.nortification {
+    background: $white; 
+    box-shadow: 0px 1px 0px #EAEDEB;
+    padding : 8px 121px;
+    margin: 0 -121px;
+    .nortification-top {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       margin-bottom: 20px;
+       .nortification-top--right {
+          .btn-close {
+             display: flex;
+             align-items: center;
+             justify-content: flex-end;
+             margin-bottom: 16px;
+             cursor: pointer;
+             span {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 160%;
+                color: $primary_black;
+                margin-left: 4px;
+             }
+          }
+       }
+       .nortification-top--left {
+          padding: 4px;
+       }
+    }
+    
+    .nortification-bottom {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       span {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #858585;
+          line-height: 20px;
+          cursor: pointer;
+          margin : 0 12px;
+          &.active {
+             font-weight: 700;
+             color: $corporate_color_1;
+             border-bottom: 2px solid $corporate_color_1;
+          }
+       }
+    }
+}
+.main-content {
+    background-color: $bg_color_2;
+    margin-top: 1px;
+    span.content-title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        color: $primary_color;
+    }
+    .main-content-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 29.5px 0;
+        .btn-fundraising {
+            button {
+                width: 95px;
+                height: 37px;
+                background: $corporate_color_5;
+                border-radius: 32px;
+                color: $corporate_color_1;
+                box-shadow: none;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+    .row1 {
+        background-color: $white;
+        padding: 24px 19px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(173, 182, 177, 0.1);
+    }
+    .row2 {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .doughnut-chart {
+            border-radius: 8px;
+            width: 38%;
+            background-color: $white;
+            padding: 24px;
+            box-shadow: 0px 4px 8px rgba(173, 182, 177, 0.1);
+        }
+        .shareholders-summary-table {
+            border-radius: 8px;
+            width: 60%;
+            background-color: $white;
+            padding: 24px;
+            box-shadow: 0px 4px 8px rgba(173, 182, 177, 0.1);
+        }
+        
+    }  
+    .row3 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .stacked-bar-chart {
+            width: 49%;
+            background-color: $white;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(173, 182, 177, 0.1);
+        }
+        .line-chart {
+            width: 49%;
+            background-color: $white;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(173, 182, 177, 0.1);
+        }
+    }
+}
+.custom-header {
+    background: $light;
+}

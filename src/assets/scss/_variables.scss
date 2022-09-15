@@ -1,0 +1,71 @@
+/* Corporate Color Variation */
+$corporate_color_1: #339967;
+$corporate_color_2: #66B28D;
+$corporate_color_3: #99CCB3;
+$corporate_color_4: #CCE5D9;
+$corporate_color_5: #E6F2EC;
+$corporate_color_6: #F2F9F6;
+$corporate_color_7: #2B895B;
+
+/* Text Color Variation */
+$primary_color: #333333;
+$secondary_color: #858585;
+$tertiary_color: #F1F3F6;
+
+/* Structure Color Variation */
+$structure_color_1: #D43C3C;
+$structure_color_2: #B93535;
+$structure_color_3: #A62E2E;
+
+/* Key Line Color Variation */
+$key_line_color_1: #EAEDEB;
+$key_line_color_2: #F3F4F3;
+
+/* BG Color Variation */
+$bg_color_1: #EAEDEB;
+$bg_color_2: #FBFBFB;
+
+$primary_secondary: #858585;
+$primary_red: #EB5757;
+$primary_black: #333333;
+$success: #48c774;
+$info: #3298dc;
+$warning: #ffdb4a;
+$danger: #f14668;
+$light: #f5f5f5;
+$dark: #363636;
+$white: #ffffff;
+$black: #000000;
+$tertiary: #C2C2C2;
+// $primary_
+
+/* colors */
+$colors: (
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "white": $white,
+  "black": $black,
+  "tertiary": $tertiary,
+  "primary_black": $primary_black,
+  "primary_secondary": $primary_secondary,
+);
+
+// directions
+$directions: (top, right, bottom, left);
+
+$border-radius: 10px;
+
+$size-16px: 16px;
+$size-18px: 18px;
+$size-14px: 14px;
+$size-12px: 12px;
+
+// form
+
+$form-width-large: 480px;
+$form-width-medium: 290px;
+
